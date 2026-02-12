@@ -11,8 +11,8 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
-      <div className="bg-white shadow-lg rounded-lg w-full max-w-md p-6">
+    <div className="min-h-screen bg-gray-700 flex items-center justify-center p-6">
+      <div className="bg-gray-200 shadow-lg rounded-lg w-full max-w-md p-6">
         <h1 className="text-2xl font-bold text-center mb-4">Todo List 📝</h1>
 
         {/* Input component for adding tasks */}
