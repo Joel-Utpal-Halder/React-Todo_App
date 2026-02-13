@@ -1,5 +1,6 @@
 import { useState } from "react";
 import TodoInput from "./components/TodoInput";
+import TodoList from "./components/TodoList"; // ✅ new import
 
 const App = () => {
   // State: list of todos
@@ -18,14 +19,8 @@ const App = () => {
         {/* Input component for adding tasks */}
         <TodoInput addTodo={addTodo} />
 
-        {/* Display the list of tasks */}
-        <ul>
-          {todos.map((todo) => (
-            <li key={todo.id} className="bg-gray-50 p-3 mb-2 rounded-sm shadow-sm">
-              {todo.text}
-            </li>
-          ))}
-        </ul>
+        {/* Display the list of tasks using TodoList */}
+        <TodoList todos={todos} />
       </div>
     </div>
   );
