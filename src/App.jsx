@@ -12,7 +12,7 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-gray-700 flex items-center justify-center p-6">
-      <div className="bg-gray-200 shadow-blue-500 shadow-md rounded-lg w-full max-w-md p-6">
+      <div className="bg-gray-200 shadow-blue-500 shadow-md rounded-sm w-full max-w-md p-6">
         <h1 className="text-2xl font-bold text-center mb-4">Todo List 📝</h1>
 
         {/* Input component for adding tasks */}
@@ -21,7 +21,7 @@ const App = () => {
         {/* Display the list of tasks */}
         <ul>
           {todos.map((todo) => (
-            <li key={todo.id} className="bg-gray-50 p-3 mb-2 rounded-lg shadow-sm">
+            <li key={todo.id} className="bg-gray-50 p-3 mb-2 rounded-sm shadow-sm">
               {todo.text}
             </li>
           ))}
