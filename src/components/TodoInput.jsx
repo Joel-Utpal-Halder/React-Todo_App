@@ -1,14 +1,14 @@
 import { useState } from "react";
 
-// Input component for adding new tasks
+// Input component for adding new tasks. It receives the 'addTodo' function as a prop from App.jsx to add new tasks to the list.
 const TodoInput = ({ addTodo }) => {
   const [input, setInput] = useState("");
 
   // Handle adding a new todo
   const handleAdd = () => {
     if (input.trim() === "") return; // prevent empty tasks
-    addTodo(input); // call parent function
-    setInput("");   // clear input after adding
+    addTodo(input); // Calls addTodo (received from App.jsx) when Add is clicked.
+    setInput("");   // Clear input after adding
   };
 
   return (
