@@ -1,7 +1,4 @@
-// This component represents a single todo item (one task card).
-// It receives a 'todo' object as a prop from TodoList.jsx.
-
-const Todo = ({ todo }) => {
+const Todo = ({ todo }) => { // Receives a 'todo' object as a prop from TodoList.jsx.
   return (
     // Each todo is displayed inside a list item <li>
     <li className="bg-gray-50 p-3 mb-2 rounded-sm shadow-sm">
