@@ -5,10 +5,10 @@ const Todo = ({ todo }) => {
   return (
     // Each todo is displayed inside a list item <li>
     <li className="bg-gray-50 p-3 mb-2 rounded-sm shadow-sm">
-      {/* Show the text of the todo */}
+      {/* Displays one todo’s text inside <li> */}
       {todo.text}
     </li>
   );
 };
 
-export default Todo;
+export default Todo; // ✅ Export so TodoList.jsx can use it
