@@ -16,10 +16,10 @@ const App = () => {
       <div className="bg-gray-200 shadow-blue-500 shadow-md rounded-sm w-full max-w-md p-6">
         <h1 className="text-2xl font-bold text-center mb-4">Todo List 📝</h1>
 
-        {/* Input component for adding tasks */}
+        {/* Input component for adding tasks. Send addTodo function to TodoInput.jsx. */}
         <TodoInput addTodo={addTodo} />
 
-        {/* Display the list of tasks using TodoList */}
+        {/* Display the list of tasks using TodoList. Send todos array to TodoList.jsx */}
         <TodoList todos={todos} />
       </div>
     </div>
