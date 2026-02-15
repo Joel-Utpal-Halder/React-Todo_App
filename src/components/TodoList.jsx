@@ -1,16 +1,19 @@
-import Todo from "./Todo"; // ✅ Import the single-task component
+import Todo from "./Todo"; // ✅ Import single-task component
 
-const TodoList = ({ todos }) => { // Receives the todos array from App.jsx.
+const TodoList = ({ todos, deleteTodo, toggleTodo }) => { // Receives 'todos' array and functions (deleteTodo, toggleTodo) from App.jsx.
   return (
     <ul>
-      {/* Loop through each todo in the array */}
+      {/* Loop through each todo and render a Todo component */}
       {todos.map((todo) => (
-        // Loops through todos with .map(). For each todo, render the Todo component. 
-        // 'key={todo.id}' gives React a unique identifier for efficient rendering
-        <Todo key={todo.id} todo={todo} /> // Passes each single todo object → to Todo.jsx.
+        <Todo
+          key={todo.id} // Unique identifier for React
+          todo={todo} // Pass the todo object
+          deleteTodo={deleteTodo} // Pass delete function
+          toggleTodo={toggleTodo} // Pass toggle function
+        />
       ))}
     </ul>
   );
 };
 
-export default TodoList; // ✅ Export so App.jsx can use it
+export default TodoList;
