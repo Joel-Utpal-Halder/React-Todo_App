@@ -1,28 +1,26 @@
 import { useState } from "react";
 
-// Input component for adding new tasks. It receives the 'addTodo' function as a prop from App.jsx to add new tasks to the list.
-const TodoInput = ({ addTodo }) => {
-  const [input, setInput] = useState("");
+const TodoInput = ({ addTodo }) => { // Receives 'addTodo' function from App.jsx as a prop.
+  const [input, setInput] = useState(""); // Local state for input field
 
-  // Handle adding a new todo
   const handleAdd = () => {
-    if (input.trim() === "") return; // prevent empty tasks
-    addTodo(input); // Calls addTodo (received from App.jsx) when Add is clicked.
-    setInput("");   // Clear input after adding
+    if (input.trim() === "") return; // ✅ Prevent empty tasks
+    addTodo(input); // Call parent function to add task
+    setInput(""); // Clear input field
   };
 
   return (
-    <div className="flex mb-4">
+    <div className="flex mb-4 bg-white">
       <input
         type="text"
         value={input}
-        onChange={(e) => setInput(e.target.value)}
-        className="flex-1 border bg-gray-50 rounded-sm px-3 py-2 focus:outline-none"
+        onChange={(e) => setInput(e.target.value)} // Update local state
+        className="flex-grow p-2 border rounded-l-sm"
         placeholder="Enter a task..."
       />
       <button
-        onClick={handleAdd}
-        className="bg-blue-500 text-white px-4 py-2 rounded-r-sm hover:bg-blue-600"
+        onClick={handleAdd} // ✅ Add task when clicked
+        className="bg-blue-500 text-white px-4 rounded-r-sm"
       >
         Add
       </button>
